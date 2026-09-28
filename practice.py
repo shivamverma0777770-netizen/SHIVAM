@@ -5,6 +5,11 @@ with open("student.csv","w+",newline='') as f:
     writer.writerows(l)
 
 with open("student.csv","r") as f:
+    rows=csv.DictReader(f)
+    for row in rows:
+        print(row)
+
+with open("student.csv","r") as f:
     rows=csv.reader(f)
     for row in rows:
         print(row)
